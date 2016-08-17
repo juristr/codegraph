@@ -1,12 +1,12 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import {  CodeGraphComponent, DemoComponent } from '../graph';
+import {  CodeGraphComponent } from '../graph';
 import { DataService } from './data.service';
 
 @Component({
   selector: 'home', 
   styleUrls: [ './home.style.css' ],
   templateUrl: './home.template.html',
-  directives: [CodeGraphComponent, DemoComponent ],
+  directives: [CodeGraphComponent],
   providers: [ DataService ],
   encapsulation: ViewEncapsulation.None // fix
 })

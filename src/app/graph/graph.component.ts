@@ -7,13 +7,7 @@ import * as d3 from 'd3';
 @Component({
     selector: 'code-graph',
     changeDetection: ChangeDetectionStrategy.OnPush,
-    template: `
-        <div class="graph"></div>
-    `,
-    styles: [
-        `
-        `
-    ]
+    template: ''
 })
 export class CodeGraphComponent implements OnInit, OnChanges {
     private width: number = 1200;
@@ -40,18 +34,19 @@ export class CodeGraphComponent implements OnInit, OnChanges {
     }
 
     ngOnInit() {
-        // var transform = d3.zoomIdentity;
-        let svg = d3.select(this.element.nativeElement.getElementsByClassName('graph')[0])
+        this.svg = d3.select(this.element.nativeElement)
             .append('svg')
-            .attr("pointer-events", "all")
-            .call(d3.zoom()
-                .scaleExtent([1/2, 8]))
-                .on('zoom', () => this.g.attr('transform', d3.event.transform))
-        
-        this.g = svg.append('g')
             .attr('width', this.width)
             .attr('height', this.height);
         
+        this.g = this.svg.append('g');
+    
+        this.svg
+            .style("pointer-events", "all")
+            .call(d3.zoom()
+                .scaleExtent([1 / 2, 4])
+                .on("zoom", ()=> this.g.attr("transform", d3.event.transform));
+
         this.color = d3.scaleOrdinal(d3.schemeCategory20);
 
         this.simulation = d3.forceSimulation()
@@ -126,6 +121,16 @@ export class CodeGraphComponent implements OnInit, OnChanges {
                     .attr("cy", function (d) { return d.y; });
             }
         });
+    }
+
+    tick() {
+        this.link.attr("x1", function (d) { return d.source.x; })
+            .attr("y1", function (d) { return d.source.y; })
+            .attr("x2", function (d) { return d.target.x; })
+            .attr("y2", function (d) { return d.target.y; });
+
+        this.node.attr("cx", function (d) { return d.x; })
+            .attr("cy", function (d) { return d.y; });
     }
 
 }
