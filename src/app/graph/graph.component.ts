@@ -16,6 +16,7 @@ export class CodeGraphComponent implements OnInit, OnChanges {
     private simulation: any;
     private link: any;
     private node: any;
+    private tooltip: any;
     private is2ndUpdate: boolean = false;
 
     @Input() graphData: any;
@@ -31,13 +32,19 @@ export class CodeGraphComponent implements OnInit, OnChanges {
             // if (this.is2ndUpdate) {
             //     this.updateGraph(this.graphData);
             // } else {
-                this.render(this.graphData);
+            this.render(this.graphData);
             // }
             // this.is2ndUpdate = true;
         }
     }
 
     ngOnInit() {
+
+        this.tooltip = d3.select(this.element.nativeElement)
+            .append('div')
+            .attr('class', 'tooltip')
+            .style('opacity', 0);
+
         this.svg = d3.select(this.element.nativeElement)
             .append('svg')
             .attr('width', this.width)
@@ -86,12 +93,12 @@ export class CodeGraphComponent implements OnInit, OnChanges {
             var node = this.g
                 .selectAll("circle")
                 .data(graph.nodes);
-            
+
             // update the nodes attributes based
             // on the new data
             node
                 .attr("fill", (d) => {
-                    if(d.isHighlighted) {
+                    if (d.isHighlighted) {
                         console.log('coloring highlighted node', d);
                         return '#7CFC00';
                     } else {
@@ -105,12 +112,27 @@ export class CodeGraphComponent implements OnInit, OnChanges {
                 .attr('class', 'node')
                 .attr("r", (d) => d.weight * 10 || 10)
                 .attr("fill", (d) => {
-                     if(d.isHighlighted) {
+                    if (d.isHighlighted) {
                         console.log('coloring highlighted node', d);
                         return '#7CFC00';
                     } else {
                         return this.color(1);
                     }
+                })
+                .on('mouseover', (d) => {
+                    this.tooltip
+                        .transition()
+                        .duration(500)
+                        .style('opacity', .85);
+
+                    this.tooltip.html(d.id)
+                        .style('left', (d3.event.pageX) + 'px')
+                        .style('top', (d3.event.pageY - 28) + 'px');
+                })
+                .on('mouseout', (d) => {
+                    this.tooltip.transition()
+                        .duration(300)
+                        .style('opacity', 0);
                 })
                 .on('dblclick', function (d) {
                     d.fx = null;
@@ -138,13 +160,9 @@ export class CodeGraphComponent implements OnInit, OnChanges {
                     })
                 );
 
-            // append titles to new nodes
-            newNodes.append("title")
-                .text(function (d) { return d.id; });
-            
             // remove old nodes
             node.exit().remove();
-            
+
             node = newNodes.merge(node);
 
 
