@@ -1,7 +1,7 @@
 {
   "nodes": [
-    {"id": "Juri", "group": 1, "weight": 2},
-    {"id": "Steffi", "group": 1, "weight": 4 },
+    {"id": "Juri", "group": 1},
+    {"id": "Steffi", "group": 1 },
     {"id": "Thomas", "group": 2},
     {"id": "Martina", "group": 2}
   ],

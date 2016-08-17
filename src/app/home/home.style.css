@@ -1,15 +1,16 @@
-.links line {
+line {
         stroke: #999;
         stroke-opacity: 0.6;
 }
 
-.node circle {
+circle {
         stroke: #fff;
         stroke-width: 1.5px;
 }
 
 .fixed {
-  fill: #f00;
+  /*fill: #f00;*/
+  border: 1px solid #f00;
 }
 
 text {
@@ -22,3 +23,8 @@ text {
     stroke-width: 3px;
     stroke-opacity: .8;
   }
+
+svg {
+  border: 1px solid #666666;
+  position:relative;
+}

@@ -1,8 +1,6 @@
 import { Component, ElementRef, OnInit, OnChanges, SimpleChange, Input, ChangeDetectionStrategy } from '@angular/core';
 import { NgZone } from '@angular/core';
 import * as d3 from 'd3';
-// import {selection, select} from 'd3-selection';
-// import 'd3-selection-multi';
 
 @Component({
     selector: 'code-graph',
@@ -13,11 +11,12 @@ export class CodeGraphComponent implements OnInit, OnChanges {
     private width: number = 1200;
     private height: number = 800;
     private svg: any;
-    private g:any;
+    private g: any;
     private color: any;
     private simulation: any;
     private link: any;
     private node: any;
+    private is2ndUpdate: boolean = false;
 
     @Input() graphData: any;
 
@@ -29,7 +28,12 @@ export class CodeGraphComponent implements OnInit, OnChanges {
         console.log('New data', this.graphData);
 
         if (this.graphData) {
-            this.render(this.graphData);
+            // if (this.is2ndUpdate) {
+            //     this.updateGraph(this.graphData);
+            // } else {
+                this.render(this.graphData);
+            // }
+            // this.is2ndUpdate = true;
         }
     }
 
@@ -38,14 +42,13 @@ export class CodeGraphComponent implements OnInit, OnChanges {
             .append('svg')
             .attr('width', this.width)
             .attr('height', this.height);
-        
+
         this.g = this.svg.append('g');
-    
+
         this.svg
             .style("pointer-events", "all")
             .call(d3.zoom()
-                .scaleExtent([1 / 2, 4])
-                .on("zoom", ()=> this.g.attr("transform", d3.event.transform));
+                .on("zoom", () => this.g.attr("transform", d3.event.transform));
 
         this.color = d3.scaleOrdinal(d3.schemeCategory20);
 
@@ -58,38 +61,74 @@ export class CodeGraphComponent implements OnInit, OnChanges {
     render(graph) {
         this.zone.runOutsideAngular(() => {
 
-            var link = this.g.append("g")
-                .attr("class", "links")
+            // create the links container and fill with data
+            var link = this.g
                 .selectAll("line")
-                .data(graph.links)
-                .enter().append("line")
-                .attr("stroke-width", (d) => Math.sqrt(d.value))
+                .data(graph.links);
+
+            // add new links
+            var newLinks = link
+                .enter()
+                .append("line")
+                .attr('class', 'link')
+                .attr("stroke-width", (d) => Math.sqrt(d.value));
+
+            // remove old ones
+            var exitLinks = link.exit().remove();
+
+            // merge changes
+            link = newLinks.merge(link);
+
+
 
             var self = this;
-            var node = this.g.append("g")
-                .attr("class", "nodes")
+            // create nodes container and fill with data
+            var node = this.g
                 .selectAll("circle")
-                .data(graph.nodes)
-                .enter().append("circle")
-                .attr("r", (d) => d.weight*10 || 10)
-                .attr("fill", (d) => this.color(d.group))
-                .on('dblclick', function(d) {
-                        d.fx = null;
-                        d.fy = null;
+                .data(graph.nodes);
+            
+            // update the nodes attributes based
+            // on the new data
+            node
+                .attr("fill", (d) => {
+                    if(d.isHighlighted) {
+                        console.log('coloring highlighted node', d);
+                        return '#7CFC00';
+                    } else {
+                        return this.color(1);
+                    }
+                });
 
-                        d3.select(this).classed('fixed', false);
+            // add eventual new nodes
+            var newNodes = node
+                .enter().append("circle")
+                .attr('class', 'node')
+                .attr("r", (d) => d.weight * 10 || 10)
+                .attr("fill", (d) => {
+                     if(d.isHighlighted) {
+                        console.log('coloring highlighted node', d);
+                        return '#7CFC00';
+                    } else {
+                        return this.color(1);
+                    }
+                })
+                .on('dblclick', function (d) {
+                    d.fx = null;
+                    d.fy = null;
+
+                    d3.select(this).classed('fixed', false);
                 })
                 .call(d3.drag()
-                    .on("start", function(d) {
+                    .on("start", function (d) {
                         if (!d3.event.active) self.simulation.alphaTarget(0.3).restart();
                         d.fx = d.x;
                         d.fy = d.y;
                     })
-                    .on("drag", function(d) {
+                    .on("drag", function (d) {
                         d.fx = d3.event.x;
                         d.fy = d3.event.y;
                     })
-                    .on("end", function(d) {
+                    .on("end", function (d) {
                         if (!d3.event.active) self.simulation.alphaTarget(0);
                         // don't reset the fx and fy coordinates to have the node stick at that position
                         // d.fx = null;
@@ -99,8 +138,15 @@ export class CodeGraphComponent implements OnInit, OnChanges {
                     })
                 );
 
-            node.append("title")
+            // append titles to new nodes
+            newNodes.append("title")
                 .text(function (d) { return d.id; });
+            
+            // remove old nodes
+            node.exit().remove();
+            
+            node = newNodes.merge(node);
+
 
             this.simulation
                 .nodes(graph.nodes)
@@ -108,6 +154,8 @@ export class CodeGraphComponent implements OnInit, OnChanges {
 
             this.simulation.force("link")
                 .links(graph.links);
+
+            ticked();
 
             function ticked() {
                 link
@@ -121,16 +169,6 @@ export class CodeGraphComponent implements OnInit, OnChanges {
                     .attr("cy", function (d) { return d.y; });
             }
         });
-    }
-
-    tick() {
-        this.link.attr("x1", function (d) { return d.source.x; })
-            .attr("y1", function (d) { return d.source.y; })
-            .attr("x2", function (d) { return d.target.x; })
-            .attr("y2", function (d) { return d.target.y; });
-
-        this.node.attr("cx", function (d) { return d.x; })
-            .attr("cy", function (d) { return d.y; });
     }
 
 }
