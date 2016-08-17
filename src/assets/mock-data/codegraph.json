@@ -1,0 +1,1752 @@
+{
+    "nodes": [
+        {
+            "id": "app"
+        },
+        {
+            "id": "app.directive"
+        },
+        {
+            "id": "authentication/module"
+        },
+        {
+            "id": "common/ajaxprogress/module"
+        },
+        {
+            "id": "conversion/module"
+        },
+        {
+            "id": "core/module"
+        },
+        {
+            "id": "data-export/module"
+        },
+        {
+            "id": "diagnostics/module"
+        },
+        {
+            "id": "documents/module"
+        },
+        {
+            "id": "editing/module"
+        },
+        {
+            "id": "footer/module"
+        },
+        {
+            "id": "help/module"
+        },
+        {
+            "id": "identify-results/module"
+        },
+        {
+            "id": "identify/module"
+        },
+        {
+            "id": "layergroups/module"
+        },
+        {
+            "id": "layertree/module"
+        },
+        {
+            "id": "loader/module"
+        },
+        {
+            "id": "measure/module"
+        },
+        {
+            "id": "ng1-egov-authentication"
+        },
+        {
+            "id": "notification/module"
+        },
+        {
+            "id": "omnibox/module"
+        },
+        {
+            "id": "permalink/module"
+        },
+        {
+            "id": "popup/module"
+        },
+        {
+            "id": "print/module"
+        },
+        {
+            "id": "selection/module"
+        },
+        {
+            "id": "settings/module"
+        },
+        {
+            "id": "shell/module"
+        },
+        {
+            "id": "spatial-query-manager/module"
+        },
+        {
+            "id": "authentication/mapscRestrict.directive"
+        },
+        {
+            "id": "Egov"
+        },
+        {
+            "id": "authentication/security.interceptor"
+        },
+        {
+            "id": "authentication/security.service"
+        },
+        {
+            "id": "authentication/securityRetryQueue.service"
+        },
+        {
+            "id": "authentication/user.service"
+        },
+        {
+            "id": "confirm-modal/module"
+        },
+        {
+            "id": "authentication/routeSecurity.service"
+        },
+        {
+            "id": "jquery"
+        },
+        {
+            "id": "basemaps/baseMapSelector.directive"
+        },
+        {
+            "id": "basemaps/baseMapSidebarWidget.component"
+        },
+        {
+            "id": "basemaps/translations.config"
+        },
+        {
+            "id": "common/directives/module"
+        },
+        {
+            "id": "common/directives/ngEnter.directive"
+        },
+        {
+            "id": "common/directives/ngIgnoreDirty.directive"
+        },
+        {
+            "id": "common/modals/modalPopup.service"
+        },
+        {
+            "id": "common/modals/module"
+        },
+        {
+            "id": "common/modals/translations.config"
+        },
+        {
+            "id": "common/userwidget/module"
+        },
+        {
+            "id": "common/userwidget/userwidget.directive"
+        },
+        {
+            "id": "moment"
+        },
+        {
+            "id": "confirm-modal/confirmModal.service"
+        },
+        {
+            "id": "conversion/conversion.filter"
+        },
+        {
+            "id": "conversion/conversion.service"
+        },
+        {
+            "id": "big"
+        },
+        {
+            "id": "core/app.constants"
+        },
+        {
+            "id": "core/dynamicEndpoint.service"
+        },
+        {
+            "id": "core/geometryHelper.service"
+        },
+        {
+            "id": "jsts"
+        },
+        {
+            "id": "core/reducer"
+        },
+        {
+            "id": "core/translation.config"
+        },
+        {
+            "id": "ngrx-store/dispatcher"
+        },
+        {
+            "id": "ngrx-store/store"
+        },
+        {
+            "id": "data-export/dataExport.component"
+        },
+        {
+            "id": "data-export/dataExport.constants"
+        },
+        {
+            "id": "data-export/dataExport.service"
+        },
+        {
+            "id": "data-export/dataExportOpener.directive"
+        },
+        {
+            "id": "data-export/translations.config"
+        },
+        {
+            "id": "delete-confirmation/confirmationDelete.service"
+        },
+        {
+            "id": "delete-confirmation/module"
+        },
+        {
+            "id": "delete-confirmation/translations.config"
+        },
+        {
+            "id": "diagnostics/layersDebug.directive"
+        },
+        {
+            "id": "documents/cardflow.directive"
+        },
+        {
+            "id": "documents/documents.constants"
+        },
+        {
+            "id": "documents/translations.config"
+        },
+        {
+            "id": "identify-results/results.constants"
+        },
+        {
+            "id": "editing/attributesSelector.service"
+        },
+        {
+            "id": "editing/circularMenu.directive"
+        },
+        {
+            "id": "editing/commands/command.factory"
+        },
+        {
+            "id": "editing/coordsEditor.directive"
+        },
+        {
+            "id": "editing/coordsEditor.service"
+        },
+        {
+            "id": "editing/coordsEditorOpener.directive"
+        },
+        {
+            "id": "editing/coordsPopup.directive"
+        },
+        {
+            "id": "editing/coordsPopup.service"
+        },
+        {
+            "id": "editing/documentsOpener.directive"
+        },
+        {
+            "id": "editing/drawer.service"
+        },
+        {
+            "id": "lodash"
+        },
+        {
+            "id": "map/treeUtils"
+        },
+        {
+            "id": "editing/drawerFeatureManager.service"
+        },
+        {
+            "id": "editing/drawerstyles.service"
+        },
+        {
+            "id": "editing/editTools/cloneTool.factory"
+        },
+        {
+            "id": "editing/editTools/deleteHoleTool.factory"
+        },
+        {
+            "id": "editing/editTools/deleteTool.factory"
+        },
+        {
+            "id": "editing/editTools/differenceTool.factory"
+        },
+        {
+            "id": "editing/editTools/holeTool.factory"
+        },
+        {
+            "id": "editing/editTools/intersectTool.factory"
+        },
+        {
+            "id": "editing/editTools/moveTool.factory"
+        },
+        {
+            "id": "editing/editTools/rotateTool.factory"
+        },
+        {
+            "id": "mathjs"
+        },
+        {
+            "id": "editing/editTools/splitTool.factory"
+        },
+        {
+            "id": "editing/editTools/unionTool.factory"
+        },
+        {
+            "id": "editing/editing.component"
+        },
+        {
+            "id": "editing/editing.constants"
+        },
+        {
+            "id": "editing/editingSidebarWidget.component"
+        },
+        {
+            "id": "editing/editingjstsHelper.factory"
+        },
+        {
+            "id": "editing/formly.config"
+        },
+        {
+            "id": "editing/messageBox.service"
+        },
+        {
+            "id": "editing/templateModel.service"
+        },
+        {
+            "id": "editing/templatetree.directive"
+        },
+        {
+            "id": "editing/translations.config"
+        },
+        {
+            "id": "editing/undoredo.service"
+        },
+        {
+            "id": "footer/footer.constants"
+        },
+        {
+            "id": "footer/footer.directive"
+        },
+        {
+            "id": "help/help.directive"
+        },
+        {
+            "id": "help/helpModel.service"
+        },
+        {
+            "id": "identify-results/results.directive"
+        },
+        {
+            "id": "identify-results/results.service"
+        },
+        {
+            "id": "identify-results/resultsView.service"
+        },
+        {
+            "id": "identify-results/translations.config"
+        },
+        {
+            "id": "identify/identify.component"
+        },
+        {
+            "id": "identify/identify.constants"
+        },
+        {
+            "id": "identify/identify.service"
+        },
+        {
+            "id": "identify/shortInfo.directive"
+        },
+        {
+            "id": "identify/shortInfoTooltip.directive"
+        },
+        {
+            "id": "identify/translations.config"
+        },
+        {
+            "id": "layergroups/constants"
+        },
+        {
+            "id": "layergroups/fallbackSrc.directive"
+        },
+        {
+            "id": "layergroups/layerGroups.directive"
+        },
+        {
+            "id": "layertree/constants"
+        },
+        {
+            "id": "layertree/layertree.directive"
+        },
+        {
+            "id": "layertree/layertreeSidebarWidget.component"
+        },
+        {
+            "id": "layertree/opacity.directive"
+        },
+        {
+            "id": "layertree/opacityHint.directive"
+        },
+        {
+            "id": "layertree/translations.config"
+        },
+        {
+            "id": "layertree/transparency.directive"
+        },
+        {
+            "id": "loader/lazy.provider"
+        },
+        {
+            "id": "loader/lazyLoader.directive"
+        },
+        {
+            "id": "loader/lazyLoader.service"
+        },
+        {
+            "id": "oclazyload"
+        },
+        {
+            "id": "require-css"
+        },
+        {
+            "id": "main"
+        },
+        {
+            "id": "bootstrap-js"
+        },
+        {
+            "id": "map/almond"
+        },
+        {
+            "id": "map/constants"
+        },
+        {
+            "id": "map/contextSelection.service"
+        },
+        {
+            "id": "map/drawTools.directive"
+        },
+        {
+            "id": "map/extentPreview.directive"
+        },
+        {
+            "id": "map/layerLegend.directive"
+        },
+        {
+            "id": "map/layerListUtils"
+        },
+        {
+            "id": "map/layerManager.service"
+        },
+        {
+            "id": "map/layerModel.service"
+        },
+        {
+            "id": "map/layerTreeConverter.service"
+        },
+        {
+            "id": "map/main"
+        },
+        {
+            "id": "map/map"
+        },
+        {
+            "id": "map/map.directive"
+        },
+        {
+            "id": "proj4"
+        },
+        {
+            "id": "utils/cors"
+        },
+        {
+            "id": "map/map.service"
+        },
+        {
+            "id": "rxjs/Subject"
+        },
+        {
+            "id": "map/mapContextModel.service"
+        },
+        {
+            "id": "map/mapDrawer.service"
+        },
+        {
+            "id": "map/mapScalePopover.directive"
+        },
+        {
+            "id": "map/mapsProjections.service"
+        },
+        {
+            "id": "map/mapswidget.app"
+        },
+        {
+            "id": "popup/module-mock"
+        },
+        {
+            "id": "settings/module-mock"
+        },
+        {
+            "id": "templates"
+        },
+        {
+            "id": "map/openlayerStyles.service"
+        },
+        {
+            "id": "map/scale.filter"
+        },
+        {
+            "id": "map/scaleFormat.directive"
+        },
+        {
+            "id": "map/scaleSelection.directive"
+        },
+        {
+            "id": "map/stylesConstruction.service"
+        },
+        {
+            "id": "map/translations.config"
+        },
+        {
+            "id": "map/userContext.interceptor"
+        },
+        {
+            "id": "map/zoom.service"
+        },
+        {
+            "id": "measure/measure.component"
+        },
+        {
+            "id": "measure/measureContext.service"
+        },
+        {
+            "id": "measure/measureLayers.service"
+        },
+        {
+            "id": "measure/measureMathHelper.service"
+        },
+        {
+            "id": "measure/measureSidebarWidget.component"
+        },
+        {
+            "id": "measure/translations.config"
+        },
+        {
+            "id": "namespace"
+        },
+        {
+            "id": "rxjs/BehaviorSubject"
+        },
+        {
+            "id": "rxjs/add/operator/scan"
+        },
+        {
+            "id": "rxjs/operator/distinctUntilChanged"
+        },
+        {
+            "id": "rxjs/operator/map"
+        },
+        {
+            "id": "rxjs/operator/pluck"
+        },
+        {
+            "id": "notification/notification.service"
+        },
+        {
+            "id": "omnibox/fifoArray"
+        },
+        {
+            "id": "omnibox/infiniteScroll.directive"
+        },
+        {
+            "id": "omnibox/omnibox.directive"
+        },
+        {
+            "id": "omnibox/resultsNavigation.service"
+        },
+        {
+            "id": "omnibox/search.service"
+        },
+        {
+            "id": "omnibox/searchModel.service"
+        },
+        {
+            "id": "omnibox/translations.config"
+        },
+        {
+            "id": "permalink/browserhistory.service"
+        },
+        {
+            "id": "permalink/permalink.service"
+        },
+        {
+            "id": "popup/popup.constants"
+        },
+        {
+            "id": "popup/popup.directive"
+        },
+        {
+            "id": "popup/popupDroppableZone.directive"
+        },
+        {
+            "id": "popup/popupOpener.directive"
+        },
+        {
+            "id": "print/geometryHelper.service"
+        },
+        {
+            "id": "print/print.component"
+        },
+        {
+            "id": "print/print.constants"
+        },
+        {
+            "id": "print/printContext.service"
+        },
+        {
+            "id": "print/printSidebarWidget.component"
+        },
+        {
+            "id": "print/translations.config"
+        },
+        {
+            "id": "routes"
+        },
+        {
+            "id": "selection/bufferInput.directive"
+        },
+        {
+            "id": "selection/import.translations.config"
+        },
+        {
+            "id": "selection/importCrsSelection.directive"
+        },
+        {
+            "id": "selection/importFeatures.service"
+        },
+        {
+            "id": "selection/selectedFeatures.service"
+        },
+        {
+            "id": "selection/selection.component"
+        },
+        {
+            "id": "selection/selection.constants"
+        },
+        {
+            "id": "selection/selectionContext.factory"
+        },
+        {
+            "id": "selection/selectionSidebarWidget.component"
+        },
+        {
+            "id": "selection/translations.config"
+        },
+        {
+            "id": "settings/localUserSettings.service"
+        },
+        {
+            "id": "settings/settingkeys.constants"
+        },
+        {
+            "id": "settings/userSettings.service"
+        },
+        {
+            "id": "shell/appNavigation.directive"
+        },
+        {
+            "id": "shell/sidebar.component"
+        },
+        {
+            "id": "shell/sidebarWidget.directive"
+        },
+        {
+            "id": "shell/toolboxNavigationSidebarWidget.component"
+        },
+        {
+            "id": "shell/toolboxSidebarWidget.component"
+        },
+        {
+            "id": "shell/translations.config"
+        },
+        {
+            "id": "spatial-query-manager/spatialQueryManager.service"
+        },
+        {
+            "id": "spatial-query-manager/spatialQueryModel.service"
+        },
+        {
+            "id": "spatial-query-manager/spatialRequestModel.service"
+        },
+        {
+            "id": "spatial-query-manager/sqmConstants.constants"
+        },
+        {
+            "id": "spatial-query-manager/translations.config"
+        }
+    ],
+    "links": [
+        {
+            "source": "app",
+            "target": "app.directive"
+        },
+        {
+            "source": "app",
+            "target": "authentication/module"
+        },
+        {
+            "source": "app",
+            "target": "common/ajaxprogress/module"
+        },
+        {
+            "source": "app",
+            "target": "conversion/module"
+        },
+        {
+            "source": "app",
+            "target": "core/module"
+        },
+        {
+            "source": "app",
+            "target": "data-export/module"
+        },
+        {
+            "source": "app",
+            "target": "diagnostics/module"
+        },
+        {
+            "source": "app",
+            "target": "documents/module"
+        },
+        {
+            "source": "app",
+            "target": "editing/module"
+        },
+        {
+            "source": "app",
+            "target": "footer/module"
+        },
+        {
+            "source": "app",
+            "target": "help/module"
+        },
+        {
+            "source": "app",
+            "target": "identify-results/module"
+        },
+        {
+            "source": "app",
+            "target": "identify/module"
+        },
+        {
+            "source": "app",
+            "target": "layergroups/module"
+        },
+        {
+            "source": "app",
+            "target": "layertree/module"
+        },
+        {
+            "source": "app",
+            "target": "loader/module"
+        },
+        {
+            "source": "app",
+            "target": "measure/module"
+        },
+        {
+            "source": "app",
+            "target": "ng1-egov-authentication"
+        },
+        {
+            "source": "app",
+            "target": "notification/module"
+        },
+        {
+            "source": "app",
+            "target": "omnibox/module"
+        },
+        {
+            "source": "app",
+            "target": "permalink/module"
+        },
+        {
+            "source": "app",
+            "target": "popup/module"
+        },
+        {
+            "source": "app",
+            "target": "print/module"
+        },
+        {
+            "source": "app",
+            "target": "selection/module"
+        },
+        {
+            "source": "app",
+            "target": "settings/module"
+        },
+        {
+            "source": "app",
+            "target": "shell/module"
+        },
+        {
+            "source": "app",
+            "target": "spatial-query-manager/module"
+        },
+        {
+            "source": "authentication/module",
+            "target": "Egov"
+        },
+        {
+            "source": "authentication/module",
+            "target": "authentication/mapscRestrict.directive"
+        },
+        {
+            "source": "authentication/module",
+            "target": "authentication/security.interceptor"
+        },
+        {
+            "source": "authentication/module",
+            "target": "authentication/security.service"
+        },
+        {
+            "source": "authentication/module",
+            "target": "authentication/securityRetryQueue.service"
+        },
+        {
+            "source": "authentication/module",
+            "target": "authentication/user.service"
+        },
+        {
+            "source": "authentication/module",
+            "target": "confirm-modal/module"
+        },
+        {
+            "source": "authentication/security.interceptor",
+            "target": "jquery"
+        },
+        {
+            "source": "authentication/user.service",
+            "target": "Egov"
+        },
+        {
+            "source": "common/directives/module",
+            "target": "common/directives/ngEnter.directive"
+        },
+        {
+            "source": "common/directives/module",
+            "target": "common/directives/ngIgnoreDirty.directive"
+        },
+        {
+            "source": "common/modals/module",
+            "target": "common/modals/modalPopup.service"
+        },
+        {
+            "source": "common/modals/module",
+            "target": "common/modals/translations.config"
+        },
+        {
+            "source": "common/userwidget/module",
+            "target": "common/userwidget/userwidget.directive"
+        },
+        {
+            "source": "common/userwidget/userwidget.directive",
+            "target": "jquery"
+        },
+        {
+            "source": "common/userwidget/userwidget.directive",
+            "target": "moment"
+        },
+        {
+            "source": "confirm-modal/module",
+            "target": "confirm-modal/confirmModal.service"
+        },
+        {
+            "source": "conversion/conversion.service",
+            "target": "big"
+        },
+        {
+            "source": "conversion/module",
+            "target": "conversion/conversion.filter"
+        },
+        {
+            "source": "conversion/module",
+            "target": "conversion/conversion.service"
+        },
+        {
+            "source": "core/geometryHelper.service",
+            "target": "jsts"
+        },
+        {
+            "source": "core/module",
+            "target": "common/directives/module"
+        },
+        {
+            "source": "core/module",
+            "target": "core/app.constants"
+        },
+        {
+            "source": "core/module",
+            "target": "core/dynamicEndpoint.service"
+        },
+        {
+            "source": "core/module",
+            "target": "core/geometryHelper.service"
+        },
+        {
+            "source": "core/module",
+            "target": "core/reducer"
+        },
+        {
+            "source": "core/module",
+            "target": "core/translation.config"
+        },
+        {
+            "source": "core/module",
+            "target": "ngrx-store/dispatcher"
+        },
+        {
+            "source": "core/module",
+            "target": "ngrx-store/store"
+        },
+        {
+            "source": "data-export/module",
+            "target": "data-export/dataExport.component"
+        },
+        {
+            "source": "data-export/module",
+            "target": "data-export/dataExport.constants"
+        },
+        {
+            "source": "data-export/module",
+            "target": "data-export/dataExport.service"
+        },
+        {
+            "source": "data-export/module",
+            "target": "data-export/dataExportOpener.directive"
+        },
+        {
+            "source": "data-export/module",
+            "target": "data-export/translations.config"
+        },
+        {
+            "source": "delete-confirmation/module",
+            "target": "delete-confirmation/confirmationDelete.service"
+        },
+        {
+            "source": "delete-confirmation/module",
+            "target": "delete-confirmation/translations.config"
+        },
+        {
+            "source": "diagnostics/module",
+            "target": "diagnostics/layersDebug.directive"
+        },
+        {
+            "source": "documents/module",
+            "target": "documents/cardflow.directive"
+        },
+        {
+            "source": "documents/module",
+            "target": "documents/documents.constants"
+        },
+        {
+            "source": "documents/module",
+            "target": "documents/translations.config"
+        },
+        {
+            "source": "documents/module",
+            "target": "footer/module"
+        },
+        {
+            "source": "documents/module",
+            "target": "identify-results/results.constants"
+        },
+        {
+            "source": "editing/drawer.service",
+            "target": "lodash"
+        },
+        {
+            "source": "editing/drawer.service",
+            "target": "map/treeUtils"
+        },
+        {
+            "source": "editing/drawerFeatureManager.service",
+            "target": "lodash"
+        },
+        {
+            "source": "editing/editTools/rotateTool.factory",
+            "target": "lodash"
+        },
+        {
+            "source": "editing/editTools/rotateTool.factory",
+            "target": "mathjs"
+        },
+        {
+            "source": "editing/editing.component",
+            "target": "lodash"
+        },
+        {
+            "source": "editing/editingjstsHelper.factory",
+            "target": "jsts"
+        },
+        {
+            "source": "editing/module",
+            "target": "core/module"
+        },
+        {
+            "source": "editing/module",
+            "target": "editing/attributesSelector.service"
+        },
+        {
+            "source": "editing/module",
+            "target": "editing/circularMenu.directive"
+        },
+        {
+            "source": "editing/module",
+            "target": "editing/commands/command.factory"
+        },
+        {
+            "source": "editing/module",
+            "target": "editing/coordsEditor.directive"
+        },
+        {
+            "source": "editing/module",
+            "target": "editing/coordsEditor.service"
+        },
+        {
+            "source": "editing/module",
+            "target": "editing/coordsEditorOpener.directive"
+        },
+        {
+            "source": "editing/module",
+            "target": "editing/coordsPopup.directive"
+        },
+        {
+            "source": "editing/module",
+            "target": "editing/coordsPopup.service"
+        },
+        {
+            "source": "editing/module",
+            "target": "editing/documentsOpener.directive"
+        },
+        {
+            "source": "editing/module",
+            "target": "editing/drawer.service"
+        },
+        {
+            "source": "editing/module",
+            "target": "editing/drawerFeatureManager.service"
+        },
+        {
+            "source": "editing/module",
+            "target": "editing/drawerstyles.service"
+        },
+        {
+            "source": "editing/module",
+            "target": "editing/editTools/cloneTool.factory"
+        },
+        {
+            "source": "editing/module",
+            "target": "editing/editTools/deleteHoleTool.factory"
+        },
+        {
+            "source": "editing/module",
+            "target": "editing/editTools/deleteTool.factory"
+        },
+        {
+            "source": "editing/module",
+            "target": "editing/editTools/differenceTool.factory"
+        },
+        {
+            "source": "editing/module",
+            "target": "editing/editTools/holeTool.factory"
+        },
+        {
+            "source": "editing/module",
+            "target": "editing/editTools/intersectTool.factory"
+        },
+        {
+            "source": "editing/module",
+            "target": "editing/editTools/moveTool.factory"
+        },
+        {
+            "source": "editing/module",
+            "target": "editing/editTools/rotateTool.factory"
+        },
+        {
+            "source": "editing/module",
+            "target": "editing/editTools/splitTool.factory"
+        },
+        {
+            "source": "editing/module",
+            "target": "editing/editTools/unionTool.factory"
+        },
+        {
+            "source": "editing/module",
+            "target": "editing/editing.component"
+        },
+        {
+            "source": "editing/module",
+            "target": "editing/editing.constants"
+        },
+        {
+            "source": "editing/module",
+            "target": "editing/editingSidebarWidget.component"
+        },
+        {
+            "source": "editing/module",
+            "target": "editing/editingjstsHelper.factory"
+        },
+        {
+            "source": "editing/module",
+            "target": "editing/formly.config"
+        },
+        {
+            "source": "editing/module",
+            "target": "editing/messageBox.service"
+        },
+        {
+            "source": "editing/module",
+            "target": "editing/templateModel.service"
+        },
+        {
+            "source": "editing/module",
+            "target": "editing/templatetree.directive"
+        },
+        {
+            "source": "editing/module",
+            "target": "editing/translations.config"
+        },
+        {
+            "source": "editing/module",
+            "target": "editing/undoredo.service"
+        },
+        {
+            "source": "editing/templatetree.directive",
+            "target": "lodash"
+        },
+        {
+            "source": "footer/module",
+            "target": "footer/footer.constants"
+        },
+        {
+            "source": "footer/module",
+            "target": "footer/footer.directive"
+        },
+        {
+            "source": "help/module",
+            "target": "help/help.directive"
+        },
+        {
+            "source": "help/module",
+            "target": "help/helpModel.service"
+        },
+        {
+            "source": "identify-results/module",
+            "target": "data-export/module"
+        },
+        {
+            "source": "identify-results/module",
+            "target": "documents/documents.constants"
+        },
+        {
+            "source": "identify-results/module",
+            "target": "footer/module"
+        },
+        {
+            "source": "identify-results/module",
+            "target": "identify-results/results.constants"
+        },
+        {
+            "source": "identify-results/module",
+            "target": "identify-results/results.directive"
+        },
+        {
+            "source": "identify-results/module",
+            "target": "identify-results/results.service"
+        },
+        {
+            "source": "identify-results/module",
+            "target": "identify-results/resultsView.service"
+        },
+        {
+            "source": "identify-results/module",
+            "target": "identify-results/translations.config"
+        },
+        {
+            "source": "identify/identify.component",
+            "target": "lodash"
+        },
+        {
+            "source": "identify/identify.service",
+            "target": "map/treeUtils"
+        },
+        {
+            "source": "identify/module",
+            "target": "core/module"
+        },
+        {
+            "source": "identify/module",
+            "target": "documents/documents.constants"
+        },
+        {
+            "source": "identify/module",
+            "target": "identify/identify.component"
+        },
+        {
+            "source": "identify/module",
+            "target": "identify/identify.constants"
+        },
+        {
+            "source": "identify/module",
+            "target": "identify/identify.service"
+        },
+        {
+            "source": "identify/module",
+            "target": "identify/shortInfo.directive"
+        },
+        {
+            "source": "identify/module",
+            "target": "identify/shortInfoTooltip.directive"
+        },
+        {
+            "source": "identify/module",
+            "target": "identify/translations.config"
+        },
+        {
+            "source": "identify/shortInfoTooltip.directive",
+            "target": "lodash"
+        },
+        {
+            "source": "layergroups/module",
+            "target": "layergroups/constants"
+        },
+        {
+            "source": "layergroups/module",
+            "target": "layergroups/fallbackSrc.directive"
+        },
+        {
+            "source": "layergroups/module",
+            "target": "layergroups/layerGroups.directive"
+        },
+        {
+            "source": "layertree/layertree.directive",
+            "target": "lodash"
+        },
+        {
+            "source": "layertree/module",
+            "target": "core/module"
+        },
+        {
+            "source": "layertree/module",
+            "target": "layertree/constants"
+        },
+        {
+            "source": "layertree/module",
+            "target": "layertree/layertree.directive"
+        },
+        {
+            "source": "layertree/module",
+            "target": "layertree/layertreeSidebarWidget.component"
+        },
+        {
+            "source": "layertree/module",
+            "target": "layertree/opacity.directive"
+        },
+        {
+            "source": "layertree/module",
+            "target": "layertree/opacityHint.directive"
+        },
+        {
+            "source": "layertree/module",
+            "target": "layertree/translations.config"
+        },
+        {
+            "source": "layertree/module",
+            "target": "layertree/transparency.directive"
+        },
+        {
+            "source": "layertree/module",
+            "target": "settings/module"
+        },
+        {
+            "source": "loader/module",
+            "target": "authentication/module"
+        },
+        {
+            "source": "loader/module",
+            "target": "core/module"
+        },
+        {
+            "source": "loader/module",
+            "target": "loader/lazy.provider"
+        },
+        {
+            "source": "loader/module",
+            "target": "loader/lazyLoader.directive"
+        },
+        {
+            "source": "loader/module",
+            "target": "loader/lazyLoader.service"
+        },
+        {
+            "source": "loader/module",
+            "target": "oclazyload"
+        },
+        {
+            "source": "loader/module",
+            "target": "require-css"
+        },
+        {
+            "source": "main",
+            "target": "app"
+        },
+        {
+            "source": "main",
+            "target": "bootstrap-js"
+        },
+        {
+            "source": "main",
+            "target": "jquery"
+        },
+        {
+            "source": "map/layerManager.service",
+            "target": "jquery"
+        },
+        {
+            "source": "map/layerManager.service",
+            "target": "lodash"
+        },
+        {
+            "source": "map/layerManager.service",
+            "target": "map/layerListUtils"
+        },
+        {
+            "source": "map/layerManager.service",
+            "target": "map/treeUtils"
+        },
+        {
+            "source": "map/layerTreeConverter.service",
+            "target": "lodash"
+        },
+        {
+            "source": "map/layerTreeConverter.service",
+            "target": "map/treeUtils"
+        },
+        {
+            "source": "map/map.directive",
+            "target": "jquery"
+        },
+        {
+            "source": "map/map.directive",
+            "target": "proj4"
+        },
+        {
+            "source": "map/map.directive",
+            "target": "utils/cors"
+        },
+        {
+            "source": "map/map.service",
+            "target": "map/treeUtils"
+        },
+        {
+            "source": "map/map.service",
+            "target": "rxjs/Subject"
+        },
+        {
+            "source": "map/mapswidget.app",
+            "target": "conversion/module"
+        },
+        {
+            "source": "map/mapswidget.app",
+            "target": "core/module"
+        },
+        {
+            "source": "map/mapswidget.app",
+            "target": "footer/module"
+        },
+        {
+            "source": "map/mapswidget.app",
+            "target": "identify/module"
+        },
+        {
+            "source": "map/mapswidget.app",
+            "target": "layergroups/module"
+        },
+        {
+            "source": "map/mapswidget.app",
+            "target": "layertree/module"
+        },
+        {
+            "source": "map/mapswidget.app",
+            "target": "measure/module"
+        },
+        {
+            "source": "map/mapswidget.app",
+            "target": "omnibox/module"
+        },
+        {
+            "source": "map/mapswidget.app",
+            "target": "popup/module-mock"
+        },
+        {
+            "source": "map/mapswidget.app",
+            "target": "selection/module"
+        },
+        {
+            "source": "map/mapswidget.app",
+            "target": "settings/module-mock"
+        },
+        {
+            "source": "map/mapswidget.app",
+            "target": "templates"
+        },
+        {
+            "source": "measure/measureMathHelper.service",
+            "target": "proj4"
+        },
+        {
+            "source": "measure/module",
+            "target": "core/module"
+        },
+        {
+            "source": "measure/module",
+            "target": "delete-confirmation/module"
+        },
+        {
+            "source": "measure/module",
+            "target": "measure/measure.component"
+        },
+        {
+            "source": "measure/module",
+            "target": "measure/measureContext.service"
+        },
+        {
+            "source": "measure/module",
+            "target": "measure/measureLayers.service"
+        },
+        {
+            "source": "measure/module",
+            "target": "measure/measureMathHelper.service"
+        },
+        {
+            "source": "measure/module",
+            "target": "measure/measureSidebarWidget.component"
+        },
+        {
+            "source": "measure/module",
+            "target": "measure/translations.config"
+        },
+        {
+            "source": "ngrx-store/dispatcher",
+            "target": "rxjs/Subject"
+        },
+        {
+            "source": "ngrx-store/store",
+            "target": "rxjs/BehaviorSubject"
+        },
+        {
+            "source": "ngrx-store/store",
+            "target": "rxjs/add/operator/scan"
+        },
+        {
+            "source": "ngrx-store/store",
+            "target": "rxjs/operator/distinctUntilChanged"
+        },
+        {
+            "source": "ngrx-store/store",
+            "target": "rxjs/operator/map"
+        },
+        {
+            "source": "ngrx-store/store",
+            "target": "rxjs/operator/pluck"
+        },
+        {
+            "source": "notification/module",
+            "target": "notification/notification.service"
+        },
+        {
+            "source": "omnibox/module",
+            "target": "core/module"
+        },
+        {
+            "source": "omnibox/module",
+            "target": "omnibox/infiniteScroll.directive"
+        },
+        {
+            "source": "omnibox/module",
+            "target": "omnibox/omnibox.directive"
+        },
+        {
+            "source": "omnibox/module",
+            "target": "omnibox/resultsNavigation.service"
+        },
+        {
+            "source": "omnibox/module",
+            "target": "omnibox/search.service"
+        },
+        {
+            "source": "omnibox/module",
+            "target": "omnibox/searchModel.service"
+        },
+        {
+            "source": "omnibox/module",
+            "target": "omnibox/translations.config"
+        },
+        {
+            "source": "omnibox/module",
+            "target": "settings/module"
+        },
+        {
+            "source": "omnibox/omnibox.directive",
+            "target": "jquery"
+        },
+        {
+            "source": "omnibox/search.service",
+            "target": "lodash"
+        },
+        {
+            "source": "omnibox/search.service",
+            "target": "omnibox/fifoArray"
+        },
+        {
+            "source": "omnibox/search.service",
+            "target": "rxjs/Subject"
+        },
+        {
+            "source": "permalink/module",
+            "target": "permalink/browserhistory.service"
+        },
+        {
+            "source": "permalink/module",
+            "target": "permalink/permalink.service"
+        },
+        {
+            "source": "permalink/permalink.service",
+            "target": "jquery"
+        },
+        {
+            "source": "popup/module",
+            "target": "popup/popup.constants"
+        },
+        {
+            "source": "popup/module",
+            "target": "popup/popup.directive"
+        },
+        {
+            "source": "popup/module",
+            "target": "popup/popupDroppableZone.directive"
+        },
+        {
+            "source": "popup/module",
+            "target": "popup/popupOpener.directive"
+        },
+        {
+            "source": "popup/module-mock",
+            "target": "popup/popup.constants"
+        },
+        {
+            "source": "print/module",
+            "target": "core/module"
+        },
+        {
+            "source": "print/module",
+            "target": "print/geometryHelper.service"
+        },
+        {
+            "source": "print/module",
+            "target": "print/print.component"
+        },
+        {
+            "source": "print/module",
+            "target": "print/print.constants"
+        },
+        {
+            "source": "print/module",
+            "target": "print/printContext.service"
+        },
+        {
+            "source": "print/module",
+            "target": "print/printSidebarWidget.component"
+        },
+        {
+            "source": "print/module",
+            "target": "print/translations.config"
+        },
+        {
+            "source": "print/print.component",
+            "target": "map/treeUtils"
+        },
+        {
+            "source": "selection/bufferInput.directive",
+            "target": "jquery"
+        },
+        {
+            "source": "selection/module",
+            "target": "conversion/module"
+        },
+        {
+            "source": "selection/module",
+            "target": "core/module"
+        },
+        {
+            "source": "selection/module",
+            "target": "selection/bufferInput.directive"
+        },
+        {
+            "source": "selection/module",
+            "target": "selection/import.translations.config"
+        },
+        {
+            "source": "selection/module",
+            "target": "selection/importCrsSelection.directive"
+        },
+        {
+            "source": "selection/module",
+            "target": "selection/importFeatures.service"
+        },
+        {
+            "source": "selection/module",
+            "target": "selection/selectedFeatures.service"
+        },
+        {
+            "source": "selection/module",
+            "target": "selection/selection.component"
+        },
+        {
+            "source": "selection/module",
+            "target": "selection/selection.constants"
+        },
+        {
+            "source": "selection/module",
+            "target": "selection/selectionContext.factory"
+        },
+        {
+            "source": "selection/module",
+            "target": "selection/selectionSidebarWidget.component"
+        },
+        {
+            "source": "selection/module",
+            "target": "selection/translations.config"
+        },
+        {
+            "source": "selection/selection.component",
+            "target": "lodash"
+        },
+        {
+            "source": "selection/selection.component",
+            "target": "map/treeUtils"
+        },
+        {
+            "source": "settings/module",
+            "target": "core/module"
+        },
+        {
+            "source": "settings/module",
+            "target": "settings/localUserSettings.service"
+        },
+        {
+            "source": "settings/module",
+            "target": "settings/settingkeys.constants"
+        },
+        {
+            "source": "settings/module",
+            "target": "settings/userSettings.service"
+        },
+        {
+            "source": "settings/module-mock",
+            "target": "settings/settingkeys.constants"
+        },
+        {
+            "source": "shell/module",
+            "target": "conversion/module"
+        },
+        {
+            "source": "shell/module",
+            "target": "core/module"
+        },
+        {
+            "source": "shell/module",
+            "target": "footer/module"
+        },
+        {
+            "source": "shell/module",
+            "target": "layergroups/module"
+        },
+        {
+            "source": "shell/module",
+            "target": "layertree/module"
+        },
+        {
+            "source": "shell/module",
+            "target": "measure/module"
+        },
+        {
+            "source": "shell/module",
+            "target": "selection/module"
+        },
+        {
+            "source": "shell/module",
+            "target": "shell/appNavigation.directive"
+        },
+        {
+            "source": "shell/module",
+            "target": "shell/sidebar.component"
+        },
+        {
+            "source": "shell/module",
+            "target": "shell/sidebarWidget.directive"
+        },
+        {
+            "source": "shell/module",
+            "target": "shell/toolboxNavigationSidebarWidget.component"
+        },
+        {
+            "source": "shell/module",
+            "target": "shell/toolboxSidebarWidget.component"
+        },
+        {
+            "source": "shell/module",
+            "target": "shell/translations.config"
+        },
+        {
+            "source": "spatial-query-manager/module",
+            "target": "core/module"
+        },
+        {
+            "source": "spatial-query-manager/module",
+            "target": "notification/module"
+        },
+        {
+            "source": "spatial-query-manager/module",
+            "target": "spatial-query-manager/spatialQueryManager.service"
+        },
+        {
+            "source": "spatial-query-manager/module",
+            "target": "spatial-query-manager/spatialQueryModel.service"
+        },
+        {
+            "source": "spatial-query-manager/module",
+            "target": "spatial-query-manager/spatialRequestModel.service"
+        },
+        {
+            "source": "spatial-query-manager/module",
+            "target": "spatial-query-manager/sqmConstants.constants"
+        },
+        {
+            "source": "spatial-query-manager/module",
+            "target": "spatial-query-manager/translations.config"
+        },
+        {
+            "source": "utils/cors",
+            "target": "jquery"
+        }
+    ]
+}

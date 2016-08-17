@@ -1,0 +1,14 @@
+{
+  "nodes": [
+    {"id": "Juri", "group": 1, "weight": 2},
+    {"id": "Steffi", "group": 1, "weight": 4 },
+    {"id": "Thomas", "group": 2},
+    {"id": "Martina", "group": 2}
+  ],
+  "links": [
+    {"source": "Juri", "target": "Steffi", "value": 1},
+    {"source": "Juri", "target": "Thomas", "value": 2},
+    {"source": "Thomas", "target": "Martina", "value": 1},
+    {"source": "Steffi", "target": "Martina", "value": 2}
+  ]
+}
