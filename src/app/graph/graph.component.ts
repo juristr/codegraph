@@ -68,6 +68,23 @@ export class CodeGraphComponent implements OnInit, OnChanges {
     render(graph) {
         this.zone.runOutsideAngular(() => {
 
+            let markers = this.svg.append("defs")
+                .selectAll("marker")
+                .data(['regular']);
+            
+            let newMarkers = markers
+                .enter()
+                .append("svg:marker")
+                .attr("id", String)
+                .attr("viewBox", "0 -5 10 10")
+                .attr("refX", 23)
+                .attr("refY", 0)
+                .attr("markerWidth", 6)
+                .attr("markerHeight", 6)
+                .attr("orient", "auto")
+                .append("path")
+                .attr("d", "M0,-5L10,0L0,5");
+
             // create the links container and fill with data
             var link = this.g
                 .selectAll("line")
@@ -78,7 +95,10 @@ export class CodeGraphComponent implements OnInit, OnChanges {
                 .enter()
                 .append("line")
                 .attr('class', 'link')
-                .attr("stroke-width", (d) => Math.sqrt(d.value));
+                .attr("stroke-width", (d) => Math.sqrt(d.value))
+                .attr("data-target", function(o) { return o.target })
+                .attr("data-source", function(o) { return o.source })
+                .attr("marker-end", function(d) { return "url(#regular)"; });
 
             // remove old ones
             var exitLinks = link.exit().remove();

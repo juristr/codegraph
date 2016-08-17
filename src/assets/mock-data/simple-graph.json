@@ -6,9 +6,10 @@
     {"id": "Martina", "group": 2}
   ],
   "links": [
-    {"source": "Juri", "target": "Steffi", "value": 1},
+    {"source": "Juri", "target": "Steffi", "value": 2},
     {"source": "Juri", "target": "Thomas", "value": 2},
-    {"source": "Thomas", "target": "Martina", "value": 1},
+    {"source": "Thomas", "target": "Martina", "value": 2},
+    {"source": "Thomas", "target": "Juri", "value": 2},
     {"source": "Steffi", "target": "Martina", "value": 2}
   ]
 }
