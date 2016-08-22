@@ -8,6 +8,7 @@ import * as d3 from 'd3';
   template: ''
 })
 export class CodeGraphComponent implements OnInit, OnChanges {
+  private linkedByIndex:any = [];
   private width: number = 1200;
   private height: number = 800;
   private svg: any;
@@ -68,6 +69,74 @@ export class CodeGraphComponent implements OnInit, OnChanges {
       .force("link", d3.forceLink().id(function (d) { return d.id; }))
       .force("charge", d3.forceManyBody())
       .force("center", d3.forceCenter(this.width / 2, this.height / 2));
+  }
+
+  isConnected(a, b) {
+    return this.linkedByIndex[a.index + "," + b.index] || this.linkedByIndex[b.index + "," + a.index] || a.index == b.index;
+  }
+
+  formatClassName(prefix, object) {
+    return prefix + '-' + object.id.replace(/(\.|\/)/gi, '-');
+  }
+
+  fadeRelatedNodes(d, opacity, nodes, links) {
+
+    // Clean
+    // $('path.link').removeAttr('data-show');
+    let self = this;
+    nodes.style("stroke-opacity", function (o) {
+      var thisOpacity;
+
+      if (self.isConnected(d, o)) {
+        thisOpacity = 1;
+      } else {
+        thisOpacity = opacity;
+      }
+
+      this.setAttribute('fill-opacity', thisOpacity);
+      this.setAttribute('stroke-opacity', thisOpacity);
+
+      if (thisOpacity == 1) {
+        this.classList.remove('dimmed');
+      } else {
+        this.classList.add('dimmed');
+      }
+
+      return thisOpacity;
+    });
+
+    links.style("stroke-opacity", function (o) {
+
+      if (o.source === d) {
+
+        // Highlight target/sources of the link
+        var elmNodes = self.g.selectAll('.' + self.formatClassName('node', o.target));
+        elmNodes.attr('fill-opacity', 1);
+        elmNodes.attr('stroke-opacity', 1);
+
+        elmNodes.classed('dimmed', false);
+
+        // Highlight arrows
+        var elmCurrentLink = self.g.selectAll('path.link[data-source=' + o.source.index + ']');
+        elmCurrentLink.attr('data-show', true);
+        elmCurrentLink.attr('marker-end', 'url(#regular)');
+
+        return 1;
+
+      } else {
+
+        var elmAllLinks = self.g.selectAll('path.link:not([data-show])');
+
+        if (opacity == 1) {
+          elmAllLinks.attr('marker-end', 'url(#regular)');
+        } else {
+          elmAllLinks.attr('marker-end', '');
+        }
+
+        return opacity;
+      }
+
+    });
   }
 
   render(graph) {
@@ -169,11 +238,15 @@ export class CodeGraphComponent implements OnInit, OnChanges {
           this.tooltip.html(d.id)
             .style('left', (d3.event.pageX) + 'px')
             .style('top', (d3.event.pageY - 28) + 'px');
+
+          this.fadeRelatedNodes(d, 0.5, node, link);
         })
         .on('mouseout', (d) => {
           this.tooltip.transition()
             .duration(300)
             .style('opacity', 0);
+
+          this.fadeRelatedNodes(d, 1, node, link);
         })
         .on('dblclick', function (d) {
           d.fx = null;
