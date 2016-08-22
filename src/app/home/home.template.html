@@ -1,7 +1,9 @@
 <h1>Graph</h1>
 <!--<graph-filter></graph-filter>-->
-Filter: <input type="text" #filterInput (keyup)="filterGraph(filterInput.value)" />
-Highlight: <input type="text" #highlightInput (keyup)="highlight(highlightInput.value)" />
+Exclude: <input type="text" #excludeInput (change)="excludeGraph(excludeInput.value)" />
+Filter: <input type="text" #filterInput (change)="filterGraph(filterInput.value)" />
+Highlight: <input type="text" #highlightInput (change)="highlight(highlightInput.value, checkHighlightLinks.checked)" />
+<input type="checkbox" #checkHighlightLinks />
 <button (click)="filterGraph(filterInput.value)">Filter</button>
 <button (click)="resetGraph()">Reset</button>
 <code-graph [graphData]="graphData"></code-graph>

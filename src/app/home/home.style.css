@@ -3,6 +3,10 @@ line {
         stroke-opacity: 0.6;
 }
 
+line.highlighted {
+  stroke-width: 3px;
+}
+
 circle {
         stroke: #fff;
         stroke-width: 1.5px;
