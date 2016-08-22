@@ -12,6 +12,8 @@ export class CodeGraphComponent implements OnInit, OnChanges {
     private height: number = 800;
     private svg: any;
     private g: any;
+    private linksContainer: any;
+    private nodesContainer: any;
     private color: any;
     private simulation: any;
     private link: any;
@@ -52,6 +54,9 @@ export class CodeGraphComponent implements OnInit, OnChanges {
 
         this.g = this.svg.append('g');
 
+        this.linksContainer = this.g.append('g').attr('class', 'links-container');
+        this.nodesContainer = this.g.append('g').attr('class', 'nodes-container');
+
         this.svg
             .style("pointer-events", "all")
             .call(d3.zoom()
@@ -71,7 +76,7 @@ export class CodeGraphComponent implements OnInit, OnChanges {
             let markers = this.svg.append("defs")
                 .selectAll("marker")
                 .data(['regular']);
-            
+
             let newMarkers = markers
                 .enter()
                 .append("svg:marker")
@@ -86,7 +91,7 @@ export class CodeGraphComponent implements OnInit, OnChanges {
                 .attr("d", "M0,-5L10,0L0,5");
 
             // create the links container and fill with data
-            var link = this.g
+            var link = this.linksContainer
                 .selectAll("line")
                 .data(graph.links);
 
@@ -110,7 +115,7 @@ export class CodeGraphComponent implements OnInit, OnChanges {
 
             var self = this;
             // create nodes container and fill with data
-            var node = this.g
+            var node = this.nodesContainer
                 .selectAll("circle")
                 .data(graph.nodes);
 
